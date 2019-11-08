@@ -54,7 +54,7 @@ class PrivkeyConstruct(object):
 
     key = RSA.construct((n,e,d,p,q))
 
-    key = RSA._RSAobj.exportKey(key).decode('utf-8')
+    key = key.exportKey().decode('utf-8')
 
     print("\tPrivate key: \n\n\t\t{}\n".format(key.replace('\n','\n\t\t')))
 
